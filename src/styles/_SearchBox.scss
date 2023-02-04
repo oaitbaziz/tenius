@@ -1,0 +1,21 @@
+.search-box {
+  &__input {
+    background-color: $color-black-30;
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $color-white;
+    border: 0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    letter-spacing: 1px;
+
+    &::placeholder {
+      color: $color-secondary;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}

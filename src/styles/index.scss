@@ -12,14 +12,13 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  overflow: hidden;
 }
 
 body {
   font-family: $font-primary;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-orange);
+  color: $color-primary;
   line-height: 1.6;
 }
 
@@ -31,3 +30,41 @@ ul {
   list-style-type: none;
   padding-left: 0;
 }
+/* ---------------------------------- End Reset --------------------------------- */
+
+/* --------------------------------- Global --------------------------------- */
+.global {
+  position: relative;
+}
+
+.subtitle {
+  font-family: $font-primary;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $color-black-30;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 3px;
+}
+
+.text {
+  font-family: $font-secondary;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $color-primary;
+}
+
+.container {
+  padding: 0 7rem;
+
+  @media (max-width: 992px) {
+    padding: 0 1rem;
+  }
+}
+/* --------------------------------- End Global --------------------------------- */
+
+/* --------------------------------- Components --------------------------------- */
+@import "App.scss";
+@import "SearchBox.scss";
+@import "Player.scss";
+/* --------------------------------- EndComponents --------------------------------- */

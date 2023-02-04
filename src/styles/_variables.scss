@@ -1,10 +1,8 @@
 // Colors
-:root {
-  --color-orange: #f2753b;
-  --color-orange-light: #ebad65;
-  --color-black-30: #0000004d;
-  --color-white: #ffffff;
-}
+$color-primary: #f2753b;
+$color-secondary: #ebad65;
+$color-black-30: rgba(#000, 0.3);
+$color-white: #fff;
 
 // Fonts
 $font-primary: "Mulish", sans-serif;

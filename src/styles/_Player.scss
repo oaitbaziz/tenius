@@ -1,0 +1,61 @@
+.player-card {
+  & {
+    display: flex;
+    align-items: center;
+    background-color: $color-white;
+    height: 9rem;
+    padding: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 425px) {
+      padding: 0.5rem;
+    }
+  }
+
+  &__title {
+    font-family: $font-secondary;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $color-primary;
+    margin-bottom: 1.75rem;
+  }
+
+  &__img-box {
+    position: relative;
+    flex: 2;
+    height: 9rem;
+    overflow: hidden;
+
+    @media (max-width: 568px) {
+      flex: 1;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: -1.5rem;
+      width: 125%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+    flex: 3;
+    padding: 1rem;
+
+    @media (max-width: 568px) {
+      flex: 2;
+      padding: 0.5rem;
+    }
+
+    @media (max-width: 425px) {
+      padding: 0.5rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+}
