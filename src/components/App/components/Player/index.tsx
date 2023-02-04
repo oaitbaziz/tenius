@@ -1,13 +1,26 @@
-import { IPlayer } from "../../../../types";
+import { IPlayer } from "types";
 
-interface Props extends IPlayer {}
+interface Props extends IPlayer {
+  toggleDetails: (details: IPlayer | undefined) => void;
+}
 
-const Player = ({ firstname, lastname, picture, country, data }: Props) => {
-  const { rank, points } = data;
-  const { code } = country;
+const Player = (props: Props) => {
+  const {
+    firstname,
+    lastname,
+    picture,
+    country: { code },
+    data: { rank, points },
+    toggleDetails,
+  } = props;
 
   return (
-    <div className="player-card">
+    <div
+      className="player-card"
+      onClick={() => {
+        toggleDetails(props);
+      }}
+    >
       <div className="player-card__img-box">
         <img src={picture} alt={`portrait ${firstname} ${lastname}`} />
       </div>

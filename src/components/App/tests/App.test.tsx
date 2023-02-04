@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import App from "../";
-import { data } from "../../../data";
+import { data } from "data";
+import App from "..";
 
 describe("<App />", () => {
   it("should render <App />", () => {

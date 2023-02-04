@@ -1,5 +1,5 @@
 import { useMemo, useEffect, useRef } from "react";
-import { IPlayer } from "../../../../types";
+import { IPlayer } from "types";
 
 interface Props {
   players: IPlayer[];
@@ -23,9 +23,10 @@ const SearchBox = ({ players, setPlayers }: Props) => {
 
     if (value.length >= SEARCH_VALUE_MIN_LENGTH) {
       const filtredPlayers = players.filter(
-        ({ firstname, lastname }) =>
+        ({ firstname, lastname, shortname }) =>
           firstname.toLowerCase().includes(value) ||
-          lastname.toLowerCase().includes(value)
+          lastname.toLowerCase().includes(value) ||
+          shortname.toLowerCase().includes(value)
       );
 
       if (filtredPlayers.length) {
